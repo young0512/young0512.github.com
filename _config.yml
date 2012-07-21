@@ -1,0 +1,28 @@
+paginate: 4
+safe: false
+
+permalink: /:categories/:year/:month/:day/:title 
+
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
+auto: true
+pygments: true
+
+title :  Young0512
+tagline: Happy Everyday
+author :
+  name : Cynthia Young
+  email : cynthia.young0512@gmail.com
+  github : young0512
+  
+archive_path: /archive.html
+categories_path : /categories.html
+tags_path : /tags.html
+
+sitemap_path: /sitemap.txt
+RSS_path: /atom.xml
+
+BASE_PATH : 
+HOME_PATH : /
+ASSET_PATH : /assets/themes/twitter
+
+production_url : http://young0512.github.com
