@@ -3,25 +3,49 @@ layout: default
 ---
 
 <div class="page-header">
-  <h1>{{ page.title }} <small>Supporting tagline</small></h1>
+  <h2>{{ page.title }} <small>{{ page.tagline }}</small></h2>
+  <div style="margin-top: 12px">
+	<span class="page-tag">
+	  标签：
+	   {% if page.tags != empty %}
+	   {% for tag in page.tags %}
+	     <a href="{{ site.baseurl }}/tags#{{tag | replace:' ', '-' | downcase }}">{{ tag }}</a>{% if forloop.last == false %}, {%endif %}
+	   {% endfor %}
+	   {% endif %}
+	</span class="page-category">
+	<span>
+	 分类：
+	   {% if page.categories != empty %}
+	   {% for category in page.categories %}
+	     <a href="{{ site.baseurl }}/categories#{{category | replace:' ', '-' | downcase }}">{{ category }}</a>{% if forloop.last == false %}, {%endif %}
+	   {% endfor %}
+	   {% endif %}
+    </span>
+  </div>
 </div>
 
 <div class="row">
   <div class="span8">
     {{ content }}
+    {% if page.remark != empty %}
+    <br/>
+    <span style="color:#666;"><strong>{{ page.remark }}</strong></span>
+    {% endif %}
+    <br/>
+    <span style="color:gray;">{{ page.date | date: '%Y-%m-%d' }}</span>
     <hr>
     <div class="pagination">
       <ul>
       {% if page.previous %}
-        <li class="prev"><a href="{{ site.BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
+        <li class="prev"><a href="{{ site.BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; {{ page.previous.title }}</a></li>
       {% else %}
-        <li class="prev disabled"><a>&larr; Previous</a></li>
+        <li class="prev disabled"><a>&larr; 前一篇</a></li>
       {% endif %}
-        <li><a href="{{ site.BASE_PATH }}{{ site.archive_path }}">Archive</a></li>
+        <li><a href="{{ site.BASE_PATH }}{{ site.archive_path }}">文章列表</a></li>
       {% if page.next %}
-        <li class="next"><a href="{{ site.BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
+        <li class="next"><a href="{{ site.BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">{{ page.next.title }} &rarr;</a></li>
       {% else %}
-        <li class="next disabled"><a>Next &rarr;</a>
+        <li class="next disabled"><a>后一篇 &rarr;</a>
       {% endif %}
       </ul>
     </div>
@@ -30,14 +54,19 @@ layout: default
   </div>
   
   <div class="span4">
-    <h4>Published</h4>
-    <div class="date"><span>{{ page.date | date_to_long_string }}</span></div>
-
-  {% unless page.tags == empty %}
-    <h4>Tags</h4>
+  {% unless site.tags == empty %}
+    <h4>标签</h4>
     <ul class="tag_box">
-    {% assign tags_list = page.tags %}
+    {% assign tags_list = site.tags %}
     {% include tags_list %}
+    </ul>
+  {% endunless %}
+  <br/>
+  {% unless site.categories == empty %}
+    <h4>分类</h4>
+    <ul class="tag_box">
+    {% assign categories_list = site.categories %}
+    {% include categories_list %}
     </ul>
   {% endunless %}  
   </div>

@@ -1,9 +1,9 @@
 ---
 layout: nil
-title : RSS
+title: RSS
 group: navigation
 weight: 10
-nav_tag : RSS
+nav_tag: RSS
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">

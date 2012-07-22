@@ -6,6 +6,18 @@ h3 {
   background-color: #eee;
   color: purple
 }
+h4 {
+  color: #00CDCD
+}
+
+p {
+  font: 14px/1.75em georgia, serif;
+  margin: 1em 0;
+}
+.row p {
+  text-indent: 2em;
+}
+
 .navbar {
   margin-bottom: 0;
 }
@@ -34,6 +46,12 @@ h3 {
   background-color: #f5f5f5;
   padding: 20px 20px 10px;
   margin: -20px -20px 20px;
+}
+.page-tag {
+  margin: 2px 20px 2px 0px;
+}
+.page-category {
+  margin: 2px 20px 2px 0px;
 }
 
 .topbar .btn {
@@ -72,4 +90,3 @@ h3 {
 	border:1px solid #4C964D;
 	color:#FFF;
 }
-	

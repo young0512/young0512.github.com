@@ -1,7 +1,7 @@
 paginate: 4
 safe: false
 
-permalink: /:categories/:year/:month/:day/:title 
+permalink: /:year/:month/:day/:title 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 auto: true
@@ -23,6 +23,6 @@ RSS_path: /atom.xml
 
 BASE_PATH : 
 HOME_PATH : /
-ASSET_PATH : /assets/themes/twitter
+ASSET_PATH : /assets
 
 production_url : http://young0512.github.com

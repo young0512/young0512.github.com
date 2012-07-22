@@ -1,12 +1,12 @@
 ---
 layout: page
-title: "文章分类"
-tagline: ""
-description: ""
-keywords: ""
+title: 文章分类
+tagline: 
+description: 
+keywords: 
 group: navigation
 weight: 2
-nav_tag : "分类"
+nav_tag: 分类
 ---
 
 <ul class="tag_box inline">
@@ -16,7 +16,7 @@ nav_tag : "分类"
 
 
 {% for category in site.categories %} 
-  <h2 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h2>
+  <h3 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h3>
   <ul>
     {% assign pages_list = category[1] %}  
     {% include pages_list %}

@@ -1,12 +1,12 @@
 ---
 layout: page
-title : "文章归档"
-tagline: ""
-description: ""
-keywords: ""
+title: 文章归档
+tagline: 
+description: 
+keywords: 
 group: navigation
 weight: 3
-nav_tag : "归档"
+nav_tag: 归档
 ---
 
 {% assign posts_collate = site.posts %}
@@ -17,8 +17,7 @@ nav_tag : "归档"
   {% capture next_month %}{{ post.previous.date | date: "%B" }}{% endcapture %}
   
   {% if forloop.first %}
-    <h2>{{this_year}}</h2>
-    <h3>{{this_month}}</h3>
+    <h3>{{this_year}} - {{this_month}}</h3>
     <ul>
   {% endif %}
   
@@ -29,8 +28,7 @@ nav_tag : "归档"
   {% else %}
     {% if this_year != next_year %}
       </ul>
-      <h2>{{next_year}}</h2>
-      <h3>{{next_month}}</h3>
+      <h3>{{next_year}} - {{next_month}}</h3>
       <ul>
     {% else %}    
       {% if this_month != next_month %}

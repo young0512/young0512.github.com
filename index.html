@@ -1,20 +1,52 @@
 ---
 layout: page
-title: Young's Blog
-tagline: "进步每一天"
-description: ""
-keywords: ""
+title: 最近更新
+tagline: 
+description: 
+keywords: 
 group: navigation
-weight : 1
-nav_tag : "首页"
+weight: 1
+nav_tag: 首页
 ---
 
+{% for post in paginator.posts %}
+<div class="wrapper">
+	<article>
+		<h3><a href="{{ post.url }}">{{ post.title }}</a><small class="pull-right">{{ post.date | date:"%b %e, %Y" }}</small></h3>
+	</article>
+	
+	<div class="excerpt-post">
+	  <p>
+	  {% if post.summary & post.summary != empty %}
+	    {{ post.summary }}
+	  {% else %}
+	    {{ post.content | strip_html | truncatewords: 50 }}
+	  {% endif %}
+	  </p>
+	  {% unless post.tags == empty %}
+		<ul class="tag_box inline">
+		{% assign tags_list = post.tags %}
+		{% include tags_list %}
+		</ul>
+	  {% endunless %}
+	  <p style="text-align:right"><span class="more"><a  href="{{site.baseurl}}{{ post.url }}">阅读全文...</a></span></p>
+	</div>
 
-<h3> Blog Posts </h3>
+</div>
+{% endfor %}
 
-<ul class="posts">
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
+<div class="wrapper">
+	<ul class="pager">
+		{% if paginator.previous_page %}
+		<li class="previous">
+			<a href="/page{{ paginator.previous_page }}">&larr; 上一页</a>
+		</li>
+		{% endif %}
+		{% if paginator.next_page %}
+		<li class="next">
+			<a href="/page{{ paginator.next_page }}">下一页 &rarr;</a>
+		</li>
+		{% endif %}
+	</ul>
+</div>
 
