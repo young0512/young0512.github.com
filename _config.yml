@@ -7,7 +7,7 @@ exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 auto: true
 pygments: true
 
-title :  Young0512
+title :  紫梦莹轩
 tagline: Happy Everyday
 author :
   name : Cynthia Young

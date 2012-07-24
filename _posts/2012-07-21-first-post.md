@@ -1,8 +1,10 @@
 ---
 layout: post
 title: 开篇
+description: 
+keywords: Young0512, 紫梦, 莹轩
 category: 杂谈
-tags: [Young0512, Private]
+tags: [Young0512, 紫梦]
 comment: true
 published: true
 date: 2012-07-21 12:00:00
