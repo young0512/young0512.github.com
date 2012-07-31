@@ -37,15 +37,15 @@ layout: default
     <div class="pagination">
       <ul>
       {% if page.previous %}
-        <li class="prev"><a href="{{ site.BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; {{ page.previous.title }}</a></li>
+        <li class="prev"><a href="{{ site.BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; 上一篇</a></li>
       {% else %}
-        <li class="prev disabled"><a>&larr; 前一篇</a></li>
+        <li class="prev disabled"><a>&larr; 无</a></li>
       {% endif %}
         <li><a href="{{ site.BASE_PATH }}{{ site.archive_path }}">文章列表</a></li>
       {% if page.next %}
-        <li class="next"><a href="{{ site.BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">{{ page.next.title }} &rarr;</a></li>
+        <li class="next"><a href="{{ site.BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">下一篇 &rarr;</a></li>
       {% else %}
-        <li class="next disabled"><a>后一篇 &rarr;</a>
+        <li class="next disabled"><a>无 &rarr;</a>
       {% endif %}
       </ul>
     </div>
