@@ -7,7 +7,7 @@ category : Study
 tags : [Jekyll, Template, Liquid, YAML ]
 comment: true
 published: true
-date: 2012-07-21 12:00:00
+date: 2012-07-22 12:00:00
 remark: 转载自：<a href="http://jekyllbootstrap.com/lessons/jekyll-introduction.html" target="_blank">Jekyll Introduction</a>
 ---
 
