@@ -15,10 +15,12 @@ remark: Published by Cynthia Young
 
 首先，我要感谢几篇博文，把我渐渐带入 Jekyll + Github 的世界：
 
-* [像黑客一样写博客——Jekyll入门](http://www.soimort.org/tech-blog/2011/11/19/introduction-to-jekyll_zh.html)  
+* [像黑客一样写博客——Jekyll入门](http://www.soimort.org/tech-blog/2011/11/19/introduction-to-jekyll_zh.html)
+
 其实类似入门介绍的文章不少，但是Mort博客的设计风格还是挺吸引眼球的（起码我就被深深吸引，一个静态博客居然也可以做得如此的漂亮）。
 
-* [理想的写作环境：git+github+markdown+jekyll](http://www.yangzhiping.com/tech/writing-space.html)  
+* [理想的写作环境：git+github+markdown+jekyll](http://www.yangzhiping.com/tech/writing-space.html)
+
 git，不用担心写废；github，备份与远程协作；markdown，不再忧虑排版，专注写作；jekyll，简洁，专注。此博客也秉承排版简洁干净、表达清晰的风格，也促使我开始尝试 Jekyll。
 
 ---
