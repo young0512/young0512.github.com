@@ -26,8 +26,4 @@ remark: Published by Cynthia Young
 
 机会总是给有准备的人，我永远坚信这句话。
 
-
-Android相关知识点(持续更新中...)
-
-* [防止Android代码被反编译](/2012/07/30/android-anti-decompiler/)
-* [proguard.cfg 文件详解](/2012/07/30/android-proguard/)
+ [**Android相关文章**](/categories.html#Android-ref)
