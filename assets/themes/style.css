@@ -14,9 +14,6 @@ p {
   font: 14px/1.75em georgia, serif;
   margin: 1em 0;
 }
-.row p {
-  text-indent: 2em;
-}
 
 .navbar {
   margin-bottom: 0;
