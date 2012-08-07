@@ -6,6 +6,7 @@
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}紫梦莹轩{% endif %}">
     <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}小Young, Young0512, 紫梦莹轩{% endif %}">
     <meta name="author" content="{{ site.author.name }}">
+    <link rel="alternate" type="application/atom+xml" href="atom.xml" title="Atom Feed">
     <link href="{{ site.ASSET_PATH }}/themes/bootstrap.min.css" rel="stylesheet">
     <link href="{{ site.ASSET_PATH }}/themes/style.css?body=1" rel="stylesheet" type="text/css" media="all">
     <link rel="shortcut icon" href="{{ site.HOME_PATH }}favicon.ico">
@@ -13,6 +14,7 @@
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+	<script type="text/javascript" src="{{ site.ASSET_PATH }}/js/calendar.js"></script>	
   </head>
   <body>
     <div class="navbar">
@@ -41,5 +43,6 @@
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 	<script src="{{ site.ASSET_PATH }}/themes/application.js"></script>
     {% include helper/analytics %}
+    {% include helper/google_plus %}
   </body>
 </html>

@@ -1,5 +1,5 @@
 markdown: rdiscount
-paginate: 4
+paginate: 5
 paginate_files:
  - index.html
 safe: false
