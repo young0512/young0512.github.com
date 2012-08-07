@@ -1,11 +1,15 @@
+markdown: rdiscount
 paginate: 4
+paginate_files:
+ - index.html
 safe: false
 
-permalink: /:year/:month/:day/:title 
+permalink: /:year/:month/:day/:title.html
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 auto: true
 pygments: true
+lsi: true
 
 title :  紫梦莹轩
 tagline: Happy Everyday
