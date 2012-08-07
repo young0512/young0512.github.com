@@ -3,7 +3,11 @@ layout: default
 ---
 
 <div class="page-header">
-  <h2>{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h2>
+  {% if page.title %}
+ 	<h2>{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h2>
+  {% else %}
+  	<img alt="紫梦" src="{{ site.ASSET_PATH }}/img/index_top.jpg" style="height: 150px;width: 100%;" />
+  {% endif %}
 </div>
 
 <div class="row">

@@ -26,7 +26,10 @@ keywords:
 		{% include tags_list %}
 		</ul>
 	  {% endunless %}
-	  <p style="text-align:right"><span class="more"><a  href="{{site.baseurl}}{{ post.url }}">阅读全文...</a></span></p>
+	  <p class="postmetadata"><a href="{{ post.url }}#disqus_thread" ></a></p>
+	  <p style="text-align:right">
+	  	<span class="more" ><a  href="{{site.baseurl}}{{ post.url }}">阅读全文...</a></span>
+	  </p>
 	</div>
 
 </div>
