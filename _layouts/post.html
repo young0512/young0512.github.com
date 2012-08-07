@@ -57,23 +57,17 @@ layout: default
   </div>
   
   <div class="span4">
-    <h4>Calendar</h4>
-	<script language="javascript" type="text/javascript">
-		calendar();
-	</script>
-	<br/>
-	
   	{% unless site.categories == empty %}
     <h4>分类</h4>
     <ul class="tag_box">
-    {% assign categories_list = site.categories %}
-    {% include categories_list %}
+    	{% assign categories_list = site.categories %}
+    	{% include categories_list %}
     </ul>
   	{% endunless %}  
   	<br/>
   	
   	<h4>Related Posts</h4>
-	<ul>
+	<ul class="tag_box">
 		{% for post in site.related_posts limit:3 %}
  			<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
 		{% endfor %}
@@ -81,18 +75,9 @@ layout: default
 	<br/>
 	
 	<div id="recentcomments" class="dsq-widget">
-		<h2 class="dsq-widget-title">Recent Comments</h2>
+		<h4>Recent Comments</h4>
 		<script type="text/javascript" src="http://young0512.disqus.com/recent_comments_widget.js?num_items=5&hide_avatars=0&avatar_size=32&excerpt_length=200"></script>
 	</div>
 							
-  {% unless site.tags == empty %}
-    <h4>标签</h4>
-    <ul class="tag_box">
-    {% assign tags_list = site.tags %}
-    {% include tags_list %}
-    </ul>
-  {% endunless %}
-  <br/>
-  
   </div>
 </div>
