@@ -8,22 +8,22 @@ layout: default
   	<small>{{ page.tagline }}</small>
   </h2>
   <div style="margin-top: 12px">
-	<span class="page-tag">
-	  标签：
-	   {% if page.tags != empty %}
-	   {% for tag in page.tags %}
-	     <a href="{{ site.baseurl }}/tags#{{tag | replace:' ', '-' | downcase }}">{{ tag }}</a>{% if forloop.last == false %}, {%endif %}
-	   {% endfor %}
-	   {% endif %}
-	</span class="page-category">
-	<span>
+	<span class="page-category">
 	 分类：
 	   {% if page.categories != empty %}
 	   {% for category in page.categories %}
-	     <a href="{{ site.baseurl }}/categories#{{category | replace:' ', '-' | downcase }}">{{ category }}</a>{% if forloop.last == false %}, {%endif %}
+	     <a href="{{ site.categories_path }}#{{category | replace:' ', '-' | downcase }}">{{ category }}</a>{% if forloop.last == false %}, {%endif %}
 	   {% endfor %}
 	   {% endif %}
     </span>
+    <span class="page-tag">
+	  标签：
+	   {% if page.tags != empty %}
+	   {% for tag in page.tags %}
+	     <a href="{{ site.tags_path }}#{{tag | replace:' ', '-' | downcase }}">{{ tag }}</a>{% if forloop.last == false %}, {%endif %}
+	   {% endfor %}
+	   {% endif %}
+	</span>
   </div>
 </div>
 
