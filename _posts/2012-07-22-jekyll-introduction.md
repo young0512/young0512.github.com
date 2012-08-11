@@ -2,9 +2,9 @@
 layout: post
 title: Jekyll Introduction
 description: Jekyll is a parsing engine bundled as a ruby gem used to build static websites from dynamic components such as templates, partials, liquid code, markdown, etc. Jekyll is known as "a simple, blog aware, static site generator".
-keywords: Jekyll, Template, Liquid, YAML
+keywords: Jekyll, Liquid, YAML
 category : Jekyll
-tags : [Jekyll, Template, Liquid, YAML ]
+tags : [Jekyll, Liquid, YAML]
 comment: true
 published: true
 date: 2012-07-22 12:00:00
