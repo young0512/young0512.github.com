@@ -21,19 +21,28 @@ keywords:
 	  {% endif %}
 	  <span class="more" >&nbsp;&nbsp;<a  href="{{site.baseurl}}{{ post.url }}">[阅读全文]</a></span>
 	  </p>
-	  {% unless post.tags == empty %}
-		<ul class="tag_box inline">
-		{% assign tags_list = post.tags %}
-		{% include tags_list %}
-		</ul>
-	  {% endunless %}
+	<div>
+	
+	{% assign tags_list = post.tags %}
+	{% if tags_list.first[0] == null %}
+  		{% for tag in tags_list %} 
+ 			<a class="label" href="{{ site.BASE_PATH }}{{ site.tags_path }}#{{ tag }}-ref">{{ tag }}</a>
+  		{% endfor %}
+	{% else %}
+		{% for tag in tags_list %} 
+	   		<a class="label" href="{{ site.BASE_PATH }}{{ site.tags_path }}#{{ tag[0] }}-ref">{{ tag[0] }}</a>
+		{% endfor %}
+	{% endif %}
+	{% assign tags_list = nil %}
+	</div>
+		
 	  <p class="postmetadata"><a href="{{ post.url }}/#disqus_thread" ></a></p>
 	</div>
 
 </div>
 {% endfor %}
 
-<div class="wrapper">
+<div >
 	<ul class="pager">
 	<!-- pagination (a page1 folder isn't created by Jekyll.
 	To avoid 404s when going to the first page it must be
