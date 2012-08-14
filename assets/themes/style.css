@@ -85,13 +85,13 @@ h3 {
 	font-size:0.8em;
 }
 .tag_box a.active {
-	background:#6866A6;
+	background: #F87B00;
 	border:1px solid #4C964D;
 	color:#FFF;
 }
 .tag_box a:hover {
 	color: #fff;
-    background-color: #6866A6;
+    background-color: #F87B00;
 }
 .wrapper  {
     background-color:  #fff;
@@ -115,18 +115,20 @@ a:hover {
 }
 a.label:hover {
     color: #fff;
-    background-color: #6866A6;
+    background-color: #F87B00;
 }
 p a {
     border-bottom: 1px dashed #CED1D1;
 }
 
+/*
 img {
     max-width: 640px;
     height: auto;
     border: 0;
     -ms-interpolation-mode: bicubic;
 }
+*/
 .wrapper p img {
     clear: both;
     display: block;
