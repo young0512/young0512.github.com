@@ -9,6 +9,9 @@
     <link rel="alternate" type="application/atom+xml" href="{{ site.HOME_PATH }}atom.xml" title="Atom Feed">
     <link href="{{ site.ASSET_PATH }}/themes/bootstrap.min.css" rel="stylesheet">
     <link href="{{ site.ASSET_PATH }}/themes/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <!-- syntax highlighting CSS -->
+   	<link href="{{ site.ASSET_PATH }}/themes/syntax.css" rel="stylesheet" type="text/css" media="all"/>
+   
     <link rel="shortcut icon" href="{{ site.HOME_PATH }}favicon.ico">
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
@@ -17,8 +20,8 @@
 	<script type="text/javascript" src="{{ site.ASSET_PATH }}/js/calendar.js"></script>	
   </head>
   <body>
-    <div class="navbar">
-      <div class="navbar-inner">
+    <div class="topbar">
+      <div class="fill">
         <div class="container">
           <a class="brand" href="{{ site.HOME_PATH }}">{{ site.title }}</a>
           <ul class="nav">
