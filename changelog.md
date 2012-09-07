@@ -6,23 +6,22 @@ Build this blog from "jekyll-bootstrap",see this site: [jekyll-bootstrap.git](ht
 
 **Features**
 
-- change some infomation to my private.
+- 初始化blog，修改配置，增加个人信息
 
 
 #### 2012/07/21
 
 **Features**
 
-- add some my private page, such as 404.html, about.html and so on.
-- delete some pages that no use.
-- merge some pages.
-- add disqus comment.
-- add google analytics.
+- 增加个性化页面，如 404.html, about.html 等
+- 清理页面，合并部分页面，删除一些无用的页面
+- 添加disqus评论
+- 添加google analytics
 
 
 **Bug Fixes**  
 
-- Sorted navigation menu
+- 对navigation menu进行排序显示
 
 
 #### 2012/07/30
@@ -48,11 +47,21 @@ Build this blog from "jekyll-bootstrap",see this site: [jekyll-bootstrap.git](ht
 
 **Features**
 
--- 增加 Google+1
--- 增加日历
+- 增加 Google+1
+- 增加日历
 
 **Bug Fixes**  
 
 - 解决翻页page1不存在的bug
+
+
+#### 2012/09/05
+
+**Features**
+
+- 增加topbar样式，使头部置顶
+- 增加语法高亮，使用Pygments
+
+
 
 
