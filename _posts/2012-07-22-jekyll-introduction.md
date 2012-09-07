@@ -88,9 +88,6 @@ Jekyll-bootstrap conveniently provides the base directory format.
 
 Jekyll expects your website directory to be laid out like so:
 
-{% highlight javascript %}
-alert("test");
-{% endhighlight %}
     .
     |-- _config.yml
     |-- _includes
