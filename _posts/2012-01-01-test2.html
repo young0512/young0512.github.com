@@ -30,72 +30,74 @@
 		background: transparent;
 	}
 	
+	*{margin:0; padding:0;}
+	dl{
+		width:500px; 
+		border-left:solid 1px #999; 
+		border-top:solid 1px #999; 
+		overflow:hidden;
+	}
+	dl dt{
+		vertical-align:middle;
+		width:118px; 
+		text-align:center;
+		background:#E9EDF1;
+		padding: auto;
+	}
+	dl dd{
+		width:367px; 
+		padding-left:12px;
+	}
+	dl dt,dl dd{
+		float:left;
+		height:36px;
+		line-height:36px;
+		border-bottom:solid 1px #999;
+		border-right:solid 1px #999;
+	}
+	.textarea_dl dt,.textarea_dl dd{
+		float:left;
+		height:110px;
+		line-height:110px;
+		border-bottom:solid 1px #999;
+		border-right:solid 1px #999;
+	}
 	button,input,select,textarea {
 		font-size: 100%;
 		margin: 0;
 		vertical-align: middle;
 	}
-	
+
 	input,textarea {
-		border: 1px solid #CCCCCC;
+		border: 1px solid #cccccc;
 		color: #555555;
 		display: inline-block;
 		font-size: 13px;
-		height: 18px;
-		line-height: 18px;
-		// margin-bottom: 5px;
+		height: 20px;
+		line-height: 20px;
+		margin-bottom: 5px;
 	}
-	
+
 	select {
-		background-color: #FFFFFF;
+		height: 20px;
 		width: 200px;
 	}
-	
+
 	input {
-		border: 1px solid #808080;
 		width: 200px;
 	}
-	
+
 	input[type="button"], input[type="reset"], input[type="submit"] {
 	    height: auto;
-	    width: auto;
+	    width: 36px;
 	    cursor: pointer;
 	    padding: 2px 4px 2px 4px;
 	}
-	
+
 	textarea {
 		overflow: auto;
-		vertical-align: top;
-		width: 400px;
+		width: 320px;
 		height: 100px;
-	}
-	
-	fieldset {
-		padding: 5px;
-		margin: 0;
-		margin-top:10px;
-		border: 1px solid #ccc;
-	}
-	
-	legend {
-		display: block;
-		padding: 5px;
-		margin-left:15px;
-		margin-bottom: 5px;
-		border: 1px solid #ccc;
-		color: #222;
-	}
-	
-	.item {
-		margin-top: 10px;
-		margin-bottom: 10px;
-		line-height: 15px;
-		margin-left: 0px;
-	}
-	
-	.item span {
-		background-color: #f4f4f4;
-		margin-right: 4px;
 	}
 	</style>
 	<script type="text/javascript" src="{{ site.ASSET_PATH }}/js/tabpane.js"></script>
@@ -110,70 +112,107 @@ tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ) );
 		<h2 class="tab">配置类型一</h2>
 		<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
 	
-		<form action="" method="post" name="myForm" id="myForm">
-			<div class="item">
-				<span>维度类型</span>
+		<form action="#" method="post" name="myForm" id="myForm">
+			<dl>
+				<dt>维度类型</dt>
+				<dd>
 				<select id="selWeiduType" name="selWeiduType">
 					<option value="1">类型一</option>
 					<option value="2">类型二</option>
 				</select>
-					<span style="margin-left: 10px;">维度名称</span>
-				<input type="text" id="txtWeiduName" name="txtWeiduName" />
-			</div>
-			<div class="item">
-				<span>选项个数</span>
-				<input type="text" id="txtOptionNum" name="txtOptionNum" />
-			</div>
-			<fieldset>
-				<legend>评分标准及评价内容</legend>
-				<div class="item">
-					<span>高分评价</span>
-					<textarea id="txtHightComment" name="txtHightComment"></textarea>
-					<span style="margin-left: 10px;">高分值</span>
-					<input type="text" id="txtHightValue" name="txtHightValue" style="width: 50px" />
-				</div>
-				<div class="item">
-					<span>低分评价</span>
-					<textarea id="txtLowComment" name="txtLowComment"></textarea>
-					<span style="margin-left: 10px;">低分值</span>
-					<input type="text" id="txtLowValue" name="txtLowValue" style="width: 50px"/>
-				</div>
-				<div class="item">
-					<span>平均数初始值</span>
-					<input type="text" id="txtPingjunValue" name="txtPingjunValue" style="width: 120px"/>
-					<span style="margin-left: 16px;">平均数初始值</span>
-					<input type="text" id="txtPingjunValue2" name="txtPingjunValue2" style="width: 120px" />
-				</div>
-			</fieldset>
+				</dd>
+			</dl>
+			<dl>
+				<dt>维度名称</dt>
+				<dd>
+					<input type="text" id="txtWeiduName" name="txtWeiduName" />
+				</dd>
+			</dl>
+			<dl>
+				<dt>选项个数</dt>
+				<dd>
+					<input type="text" id="txtOptionNum" name="txtOptionNum" />
+				</dd>
+			</dl>
 			<br/>
-			<div class="item">
-				<span>评价名称</span>
-				<select id="selPingjiaName" name="selPingjiaName">
-					<option value="1" title="评价名称一">评价名称一</option>
-					<option value="2" title="评价名称二">评价名称二</option>
-					<option value="3" title="评价名称三">评价名称三</option>
-				</select>
-				<button type="button" id="btnAdd" style="margin-left: 10px;width:30px; font-weight:bold;" onclick="addCommentItem()">+</button>
-				<button type="button" id="btnDelete" style="margin-left: 10px;width:30px; font-weight:bold;" onclick="removeCommentItem()">-</button>
-			</div>
+				<dl>
+					<dt style="width:499px">评分标准及评价内容</dt>
+				</dl>
+				<dl class="textarea_dl">
+					<dt>高分评价</dt>
+					<dd>
+						<textarea id="txtHightComment" name="txtHightComment"></textarea>
+					</dd>
+				</dl>
+				<dl>
+					<dt>高分值</dt>
+					<dd>
+						<input type="text" id="txtHightValue" name="txtHightValue" />
+					</dd>
+				</dl>
+				<dl class="textarea_dl">
+					<dt>低分评价</dt>
+					<dd>
+						<textarea id="txtLowComment" name="txtLowComment"></textarea>
+					</dd>
+				</dl>
+				<dl>
+					<dt>低分值</dt>
+					<dd>
+						<input type="text" id="txtLowValue" name="txtLowValue" />
+					</dd>
+				</dl>
+				<dl>
+					<dt>平均数初始值</dt>
+					<dd>
+						<input type="text" id="txtPingjunValue" name="txtPingjunValue"/>
+					</dd>
+				</dl>
+			<br/>
+			<dl>
+				<dt>评价名称</dt>
+				<dd>
+					<select id="selPingjiaName" name="selPingjiaName">
+						<option value="1" title="评价名称一">评价名称一</option>
+						<option value="2" title="评价名称二">评价名称二</option>
+						<option value="3" title="评价名称三">评价名称三</option>
+					</select>
+					<button type="button" id="btnAdd" style="margin-left: 10px;width:30px; font-weight:bold;" onclick="addCommentItem()">+</button>
+					<button type="button" id="btnDelete" style="margin-left: 10px;width:30px; font-weight:bold;" onclick="removeCommentItem()">-</button>
+				</dd>
+			</dl>
 			<div id="commentContext">
 			</div>
 			<br/>
-			<div class="item" id="">
-				<span>上级评价权重</span>
-				<input type="text" id="txtValueBig" name="txtValueBig" style="width: 120px" />
-				<span style="margin-left: 16px;">平级评价权重</span>
-				<input type="text" id="txtValueBig" name="txtValueBig" style="width: 120px" />
-			</div>
-			<div class="item">
-				<span>下级评价权重</span>
-				<input type="text" id="txtValueBig" name="txtValueBig" style="width: 120px" />
-				<span style="margin-left: 16px;">自我评价权重</span>
-				<input type="text" id="txtValueBig" name="txtValueBig" style="width: 120px" />
-			</div>
-			<div class="item">
-				<input type="submit" id="ok" value="保存"/>
-			</div>
+			<dl>
+				<dt>上级评价权重</dt>
+				<dd>
+					<input type="text" id="txtValueBig" name="txtValueBig" />
+				</dd>
+			</dl>
+			<dl>
+				<dt>平级评价权重</dt>
+				<dd>
+					<input type="text" id="txtValueBig" name="txtValueBig" />
+				</dd>
+			</dl>
+			<dl>
+				<dt>下级评价权重</dt>
+				<dd>
+					<input type="text" id="txtValueBig" name="txtValueBig" />
+				</dd>
+			</dl>
+			<dl>
+				<dt>自我评价权重</dt>
+				<dd>
+					<input type="text" id="txtValueBig" name="txtValueBig" />
+				</dd>
+			</dl>
+			<dl>
+				<dt style='width:499px;'>
+					<input type="submit" id="ok" value="保存" style="width: 100px"/>
+				</dt>
+			</dl>
 		</form>
 		
 		<script >
@@ -181,23 +220,23 @@ tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ) );
 		        var selCommentName = document.getElementById("selPingjiaName");
 				var commentNameTxt = selCommentName.options[selCommentName.selectedIndex].title;
 				var commentNameValue = selCommentName.options[selCommentName.selectedIndex].value;
-				var newFieldSetId = "comment_name_" + commentNameValue;
-				if(document.getElementById(newFieldSetId)){
+				var newDivId = "comment_name_" + commentNameValue;
+				if(document.getElementById(newDivId)){
 					alert("该内容已经存在");
 					return;
 				}
-				var newFieldSet = document.createElement("fieldset"); 
-				newFieldSet.id = newFieldSetId;
+				var newDiv = document.createElement("div"); 
+				newDiv.id = newDivId;
 				
-		        var itemHtml = "<legend>" + commentNameTxt + "</legend>";
-		        itemHtml += "<div class='item'><span>分数值介于</span><input type='text' id='txtValueSmall_" + commentNameValue + "' name='txtValueSmall_" + commentNameValue + "' style='width: 50px' /><span style='margin-left: 10px;margin-right: 10px'>至</span><input type='text' id='txtValueBig' name='txtValueBig' style='width: 50px' /></div>";
-		        itemHtml += "<div class='item'><span>评价内容</span><textarea id='txtComment1_" +commentNameValue+ "' name='txtComment1_" + commentNameValue + "'></textarea></div>";
-		        itemHtml += "<div class='item'><span>发展建议</span><textarea id='txtComment2_" +commentNameValue+ "' name='txtComment2_" + commentNameValue + "'></textarea></div>";
-		        itemHtml += "<div class='item'><span>评价要点</span><textarea id='txtComment3_" +commentNameValue+ "' name='txtComment3_" + commentNameValue + "'></textarea></div>";
-		        itemHtml += "<div class='item'><span>优势评语</span><textarea id='txtComment4_" +commentNameValue+ "' name='txtComment4_" + commentNameValue + "'></textarea></div>";
-		        itemHtml += "<div class='item'><span>劣势评语</span><textarea id='txtComment5_" +commentNameValue+ "' name='txtComment5_" + commentNameValue + "'></textarea></div>";
-		    	newFieldSet.innerHTML = itemHtml;
-		    	document.getElementById("commentContext").appendChild(newFieldSet);
+		        var itemHtml = "<dl><dt style='width:499px;'>" + commentNameTxt + "</dt></dd>";
+		        itemHtml += "<dl><dt>分数值介于</dt><dd><input type='text' id='txtValueSmall_" + commentNameValue + "' name='txtValueSmall_" + commentNameValue + "' style='width: 50px' /><span style='margin-left: 10px;margin-right: 10px'>至</span><input type='text' id='txtValueBig' name='txtValueBig' style='width: 50px' /></dd></dl>";
+		        itemHtml += "<dl class='textarea_dl'><dt>评价内容</dt><dd><textarea id='txtComment1_" +commentNameValue+ "' name='txtComment1_" + commentNameValue + "'></textarea></dd></dl>";
+		        itemHtml += "<dl class='textarea_dl'><dt>发展建议</dt><dd><textarea id='txtComment2_" +commentNameValue+ "' name='txtComment2_" + commentNameValue + "'></textarea></dd></dl>";
+		        itemHtml += "<dl class='textarea_dl'><dt>评价要点</dt><dd><textarea id='txtComment3_" +commentNameValue+ "' name='txtComment3_" + commentNameValue + "'></textarea></dd></dl>";
+		        itemHtml += "<dl class='textarea_dl'><dt>优势评语</dt><dd><textarea id='txtComment4_" +commentNameValue+ "' name='txtComment4_" + commentNameValue + "'></textarea></dd></dl>";
+		        itemHtml += "<dl class='textarea_dl'><dt>劣势评语</dt><dd><textarea id='txtComment5_" +commentNameValue+ "' name='txtComment5_" + commentNameValue + "'></textarea></dd></dl>";
+		        newDiv.innerHTML = itemHtml;
+		    	document.getElementById("commentContext").appendChild(newDiv);
 		    	alert("成功添加评价名称：" + commentNameTxt);
 			}
 		
@@ -205,10 +244,10 @@ tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ) );
 		    	var selCommentName = document.getElementById("selPingjiaName");
 				var commentNameTxt = selCommentName.options[selCommentName.selectedIndex].title;
 				var commentNameValue = selCommentName.options[selCommentName.selectedIndex].value;
-				var fieldSetId = "comment_name_" + commentNameValue;
-				var fieldSetEle = document.getElementById(fieldSetId);
-				if(fieldSetEle) {
-					fieldSetEle.parentNode.removeChild(fieldSetEle);
+				var divId = "comment_name_" + commentNameValue;
+				var divEle = document.getElementById(divId);
+				if(divEle) {
+					divEle.parentNode.removeChild(divEle);
 					alert("成功删除评价名称：" + commentNameTxt);
 					return;
 				} else {
