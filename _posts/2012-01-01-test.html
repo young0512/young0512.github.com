@@ -31,22 +31,24 @@ textarea{width: 400px;height: 100px;}
 
 dl{margin-bottom:15px;}
 dt,dd{line-height:15px;}
-dt{font-weight:bold;}
+dt{font-weight:bold;float: left;height: 18px; background: #ff0000}
 dd{margin-left:0px;}
 
 </style>
 
 <form action="" method="post" name="myForm" id="myForm">
 	<dl>
-		<dd style="float: left;">
-			<span>维度类型</span>
+		<dt>维度类型</dt>
+		<dd>
 			<select id="selWeiduType" name="selWeiduType">
 				<option value="1">类型一</option>
 				<option value="2">类型二</option>
 			</select>
 		</dd>
+	</dl>
+	<dl>
+		<dt><span>维度名称</span></dt>
 		<dd>
- 			<span style="padding-left: 10px;">维度名称</span>
 			<input type="text" id="txtWeiduName" name="txtWeiduName" />
 		</dd>
 	</dl>
