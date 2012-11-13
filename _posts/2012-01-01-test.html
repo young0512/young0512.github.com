@@ -6,159 +6,65 @@ description:
 keywords: 
 ---
 
+<script type="text/javascript">
+<!--
+    function openwindow(url) {
+        MyIE.OpenNoBarWindow(url);
+    }
 
-<style type="text/css">
+    function openfullscreen(url)
+    {
+        MyIE.OpenFullScreenWindow(url);
+    } 
 
-input, textarea{
-    border: 1px solid #CCCCCC;
-    border-radius: 3px 3px 3px 3px;
-    color: #555555;
-    display: inline-block;
-    font-size: 13px;
-    height: 18px;
-    line-height: 18px;
-    margin-bottom: 5px;
-    padding: 4px;
-}
+    function closewindow()
+    {
+        MyIE.CloseWindow(); 
+    }
+    function exitfullscreen()
+    {
+        MyIE.ExitFullScreen();
+    }
+    
+    function S_FullScreen(){
+        MyIE.Self_FullScreen();
+    }
+    
+    function S_ExitFullScreen(){
+        MyIE.Self_ExitFullScreen();
+    }   
+    function S_CloseWindow(){
+        MyIE.Self_CloseWindow();
+    }      
+//-->
+</script>
 
-fieldset{padding:0;margin:0;border:0;}
-legend{display:block;width:100%;padding:0;margin-bottom:10px;font-size:19.5px;line-height:36px;color:#333333;border:0;border-bottom:1px solid #eee;}
-legend small{font-size:13.5px;color:#999999;}
-
-form{margin:0px}
-input{border:1px solid #808080;}
-textarea{width: 400px;height: 100px;}
-
-dl{margin-bottom:15px;}
-dt,dd{line-height:15px;}
-dt{font-weight:bold;float: left;height: 18px; background: #ff0000}
-dd{margin-left:0px;}
-
-</style>
-
-<form action="" method="post" name="myForm" id="myForm">
-	<dl>
-		<dt>维度类型</dt>
-		<dd>
-			<select id="selWeiduType" name="selWeiduType">
-				<option value="1">类型一</option>
-				<option value="2">类型二</option>
-			</select>
-		</dd>
-	</dl>
-	<dl>
-		<dt><span>维度名称</span></dt>
-		<dd>
-			<input type="text" id="txtWeiduName" name="txtWeiduName" />
-		</dd>
-	</dl>
-	<dl>
-		<dd>
-			<span>选项个数</span>
-			<input type="text" id="txtOptionNum" name="txtOptionNum" />
-		</dd>
-	</dl>
-	<fieldset>
-		<legend><small>评分标准及评价内容</small></legend>
-		<dl>
-			<dd>
-				<span>高分评价</span>
-				<textarea id="txtHightComment" name="txtHightComment"></textarea>
-				<span style="padding-left: 10px;">高分值</span>
-				<input type="text" id="txtHightValue" name="txtHightValue" style="width: 50px" />
-			</dd>
-		</dl>
-		<dl>
-			<dd>
-				<span>低分评价</span>
-				<textarea id="txtLowComment" name="txtLowComment"></textarea>
-				<span style="padding-left: 10px;">低分值</span>
-				<input type="text" id="txtLowValue" name="txtLowValue" style="width: 50px"/>
-			</dd>
-		</dl>
-		<dl>
-			<dd>
-				<span>平均数初始值</span>
-				<input type="text" id="txtPingjunValue" name="txtPingjunValue" style="width: 130px"/>
-				<span style="padding-left: 16px;">平均数初始值</span>
-				<input type="text" id="txtPingjunValue2" name="txtPingjunValue2" style="width: 130px" />
-			</dd>
-		</dl>
-	</fieldset>
-	<dl>
-		<dd>
-			<span>评价名称</span>
-			<select id="selPingjiaName" name="selPingjiaName">
-				<option value="评价名称一">评价名称一</option>
-				<option value="评价名称二">评价名称二</option>
-				<option value="评价名称三">评价名称二</option>
-			</select>
-			<button type="button" id="btnAdd" style="padding:2px;margin-bottom: 10px; margin-left: 10px;width:30px; font-weight:bold; margin-bottom: 5px;">+</button>
-			<button type="button" id="btnDelete" style="padding:2px;margin-bottom: 10px; margin-left: 10px;width:30px; font-weight:bold; margin-bottom: 5px;">-</button>
-		</dd>
-	</dl>
-	<fieldset>
-		<legend><small>评价名称一</small></legend>
-		<dl>
-			<dd>
-				<span>分数值介于</span>
-				<input type="text" id="txtValueSmall" name="txtValueSmall" style="width: 50px" />
-				<span>至</span>
-				<input type="text" id="txtValueBig" name="txtValueBig" style="width: 50px" />
-			</dd>
-		</dl>
-		<dl>
-			<dd>
-				<span>评价内容</span>
-				<textarea id="txtComment1" name="txtComment1"></textarea>
-			</dd>
-		</dl>
-		<dl>
-			<dd>
-				<span>发展建议</span>
-				<textarea id="txtComment2" name="txtComment2"></textarea>
-			</dd>
-		</dl>
-		<dl>
-			<dd>
-				<span>评价要点</span>
-				<textarea id="txtComment3" name="txtComment3"></textarea>
-			</dd>
-		</dl>
-		<dl>
-			<dd>
-				<span>优势评语</span>
-				<textarea id="txtComment4" name="txtComment4"></textarea>
-			</dd>
-		</dl>
-		<dl>
-			<dd>
-				<span>劣势评语</span>
-				<textarea id="txtComment5" name="txtComment5"></textarea>
-			</dd>
-		</dl>
-	</fieldset>
-	
-	<dl>
-		<dd>
-			<span>上级评价权重</span>
-			<input type="text" id="txtValueBig" name="txtValueBig" style="width: 130px" />
-			<span style="padding-left: 16px;">平级评价权重</span>
-			<input type="text" id="txtValueBig" name="txtValueBig" style="width: 130px" />
-		</dd>
-	</dl>
-	<dl>
-		<dd>
-			<span>下级评价权重</span>
-			<input type="text" id="txtValueBig" name="txtValueBig" style="width: 130px" />
-			<span style="padding-left: 16px;">自我评价权重</span>
-			<input type="text" id="txtValueBig" name="txtValueBig" style="width: 130px" />
-		</dd>
-	</dl>
-	
-</form>
-
-
+<h1>
+	Delphi 7 ActiveX Test Page
+</h1>
+<p>
+    You should see your Delphi 7 forms or controls embedded in the form below.
+    <hr />
+    <a href="javascript:void(0);" onclick="openwindow('http://www.baidu.com');">打开一个新窗口</a>
+	<br />
+	<a href="javascript:void(0);" onclick="closewindow();">关闭打开的窗口</a>
+	<br />
+	<a href="javascript:void(0);" onclick="openfullscreen('http://www.baidu.com');">打开一个全屏新窗口</a>
+	<br />
+	<a href="javascript:void(0);" onclick="exitfullscreen();">新窗口退出全屏</a>
+	<hr />
+	<a href="javascript:void(0);" onclick="S_FullScreen();">使本窗口全屏显示</a>
+	<br />
+	<a href="javascript:void(0);" onclick="S_ExitFullScreen();">使本窗口退出全屏</a>
+	<br />
+	<a href="javascript:void(0);" onclick="S_CloseWindow();">关闭本窗口</a>
+	<hr />
+	<center>
+    	<object id="MyIE" classid="clsid:66CDFBB1-E415-4404-94E1-F0EFA2455D60" codebase="http://www.youngflying.com/assets/iYayaWebControllerActiveX.cab#version=1,0,17,0"
+        	width="0" height="0" align="center" hspace="0" vspace="0">
+    	</object>
+	</center>
+</p>
 
 
 
