@@ -56,23 +56,24 @@ layout: default
     {% include helper/comments %}
   </div>
   
+  <br/>
   <div class="span4">
   	{% unless site.categories == empty %}
-    <h4>分类</h4>
-    <ul class="tag_box">
+    <h4>Categorys</h4>
+    <ul class="tag_box inline">
     	{% assign categories_list = site.categories %}
     	{% include categories_list %}
     </ul>
   	{% endunless %}  
-  	<br/>
+  	<br/><br/>
   	
   	<h4>Related Posts</h4>
-	<ul class="tag_box">
+	<ul class="tag_box nowrap">
 		{% for post in site.related_posts limit:3 %}
- 			<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+ 			<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
 		{% endfor %}
 	</ul>
-	<br/>
+	<br/><br/>
 	
 	<div id="recentcomments" class="dsq-widget">
 		<h4>Recent Comments</h4>

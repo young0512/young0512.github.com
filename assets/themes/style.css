@@ -76,6 +76,11 @@ h3 {
 .tag_box.inline li {
 	float:left;
 }
+.tag_box.nowrap li {
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	overflow: hidden;
+}
 .tag_box a {
 	padding: 3px 6px;
 	margin: 2px;
